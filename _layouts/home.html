@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div id="cover" class="container-fluid"
+{% if page.image %}style="background-image: url({{ page.jpgimage }}), url({{ page.image }});"{% endif %}>
+<div>
+<h1>{{ page.title }}</h1>
+<p>{{ page.description | newline_to_br }}</p>
+</div>
+</div>
+
+<!--
+<div id="navbar" class="container">
+<h5>Featured Posts</h5>
+</div>
+-->
+<div id="grid-gallery" class="grid-gallery" style="margin-top: 10px;">
+
+<section class="grid-wrap">
+
+{{ content }}
+
+</section><!-- // grid-wrap -->
+
+</div><!-- // grid-gallery -->
+<div class="clearfix"></div>
+
+{% include pagination.html %}
