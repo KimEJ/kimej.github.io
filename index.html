@@ -12,14 +12,29 @@ pagination:
       <header class="p3">
         <h1 class="ampstart-fullpage-hero-heading mb0 hanuman">
           <span class="ampstart-fullpage-hero-heading-text title">
-            {{ site.title }}
+            저는 <b>김어진</b>입니다.
           </span>
         </h1>
         <h2 class="ampstart-fullpage-hero-heading mb0">
-          <span class="ampstart-fullpage-hero-heading-text description">
-            {{ site.description }}
+          <span class="ampstart-fullpage-hero-heading-text description slider">
+            Embedded SW Developer, Server Developer, System Engineer
           </span>
         </h2>
+        <script>
+          (function ($) {
+            if ($('.text-slider').length == 1) {
+              var typed_strings = $('.text-slider-items').text();
+              var typed = new Typed('.text-slider', {
+                strings: typed_strings.split(','),
+                typeSpeed: 80,
+                loop: true,
+                backDelay: 1100,
+                backSpeed: 30
+              });
+            }
+          })(jQuery);
+
+        </script>
     </header>
     {% if site.cover %}
     <footer class="absolute left-0 right-0 bottom-0">
