@@ -726,18 +726,9 @@ body > figure > figcaption > header > h2 {
     background:$theme-color
 }
 
-.typing-txt{display: none;}
-.typeing-txt ul{list-style:none;}
-.typing {  
-  display: inline; 
-  animation-name: cursor; 
-  animation-duration: 0.5s; 
-  animation-iteration-count: infinite; 
-  font-size: 3rem;
-  line-height:1;
-} 
-@keyframes cursor{ 
-  0%{border-right: 1px solid #fff} 
-  50%{border-right: 1px solid #000} 
-  100%{border-right: 1px solid #fff} 
+.typed-cursor{
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
