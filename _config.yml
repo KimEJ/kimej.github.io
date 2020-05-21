@@ -1,56 +1,66 @@
-title: 매일수시
-email: kimuj5090@google.com
-baseurl: ''
-#url: 'http://ab.yss.al'
-timezone: Asia/Seoul 
-future: true
+# Site settings
+title: Portpolio
+description: Portpolio Site
+cover: assets/images/radhakrishna.jpg
+logo: assets/images/logo.png
+favicon: assets/images/favicon.png
+baseurl: "/portpolio/" # the subpath of your site, e.g. /blog/ or / for root
+url: "https://KimEJ.github.io" # the base hostname & protocol for your site
 
-#repository: KimEJ/ab.yss.al
+pagination:
 
-permalink: /:year/:month/:day/:title/
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
 
-excerpt_separator: <!--more-->
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
 
+  per_page: 5
+
+# Social
+facebook: facebook
+twitter: twitter
+github:  https://github.com/KimEJ/
+
+#Additional Pages
+about: about
+contact: contact
+privacy-policy: privacy-policy
+
+
+permalink: /:title
+
+
+# Google Analytics
+analytics_id: ""
+
+# Build settings
 markdown: kramdown
 
-krandown:
-  input: GFM
-  highlighter: rouge
+kramdown:
+  parse_block_html: true
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
-paginate: 5
-paginate_path: '/page/:num/'
 
-collections:
-  authors:
-    output: true
-    permalink: /authors/:path/
-  tags:
-    output: true
-    permalink: /tags/:path/
+# Settings for rake task
+safe: False
+lsi: False
+username: samanyougarg #github username
+repo: hanuman #github repository
+branch: master #branch
+relative_source: ../hanuman/ #source directory
+destination: ../hanuman-pages/ #destination directory
+production_url:  https://samanyougarg.com/
+source_url:  https://github.com/KimEJ/KimEJ.github.io #source repository url
 
-defaults:
-  - scope:
-      path: ''
-      type: authors
-    values:
-      layout: author
-  - scope:
-      path: ''
-      type: tags
-    values:
-      layout: tag
-
-exclude: [README.md, Gemfile, Gemfile.lock]
-
-keep_files: [assets, files]
-github: [metadata]
-# iolo's custom
-author: kimuj5090@gmail.com
-asset_url: /assets
-#google_analytics:
-#  ua: 'UA-137360712-1'
-
-theme: jekyll-theme-cayman
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml

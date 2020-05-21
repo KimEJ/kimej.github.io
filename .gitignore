@@ -1,4 +1,4 @@
-Gemfile.lock
 _site/
-category/
-*~
+.sass-cache/
+.jekyll-metadata
+Gemfile.lock
