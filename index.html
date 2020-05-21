@@ -23,7 +23,9 @@ pagination:
         </h2>
         <script>
           (function ($) {
+              console.log('jquary start')
             if ($('.slider').length == 1) {
+              console.log('slider = 1')
               var typed_strings = $('.slider-items').text();
               var typed = new Typed('.slider', {
                 strings: typed_strings.split(','),
