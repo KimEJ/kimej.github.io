@@ -4,7 +4,7 @@ description: Portpolio Site
 cover: assets/images/background.jpg
 logo: assets/images/logo.png
 favicon: assets/images/favicon.png
-baseurl: "/portpolio/" # the subpath of your site, e.g. /blog/ or / for root
+baseurl: "/" # the subpath of your site, e.g. /blog/ or / for root
 url: "https://KimEJ.github.io" # the base hostname & protocol for your site
 
 pagination:
