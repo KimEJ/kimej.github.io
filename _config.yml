@@ -18,9 +18,9 @@ pagination:
   per_page: 5
 
 # Social
-facebook: facebook
-twitter: twitter
-github:  https://github.com/KimEJ/
+# facebook: facebook
+# twitter: twitter
+github:  KimEJ
 
 #Additional Pages
 about: about
