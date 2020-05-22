@@ -1,15 +1,6 @@
-<amp-analytics type="googleanalytics" id="amp-analytics">
-<script type="application/json">
-{
-  "vars": {
-    "account": "{{ site.analytics_id }}"
-  },
-  "triggers": {
-    "trackPageview": {
-      "on": "visible",
-      "request": "pageview"
-    }
-  }
-}
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
 </script>
-</amp-analytics>
+<script async src='https://www.google-analytics.com/analytics.js'></script>

@@ -1,66 +1,41 @@
 # Site settings
-title: Portpolio
-description: Portpolio Site
-cover: assets/images/background.jpg
-logo: assets/images/logo.png
-favicon: assets/images/favicon.png
-baseurl: "/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://KimEJ.github.io" # the base hostname & protocol for your site
-
-pagination:
-
-  # Site-wide kill switch, disabled here it doesn't run at all 
-  enabled: true
-
-  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
-  debug: false
-
-  per_page: 5
-
-# Social
-# facebook: facebook
-# twitter: twitter
-github:  KimEJ
-
-#Additional Pages
-about: about
-contact: contact
-privacy-policy: privacy-policy
-
-
-permalink: /:title
-
+title:          Tale
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        "/tale"
+url:            "https://chesterhow.github.io"
 
 # Google Analytics
-analytics_id: ""
+google_analytics: UA—XXXXXXXX-X
+
+# Author
+author:
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
 
 # Build settings
-markdown: kramdown
+markdown:       kramdown
+include:
+  - _pages
 
-kramdown:
-  parse_block_html: true
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
 
+# Gems
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
 
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
 
-# Settings for rake task
-safe: False
-lsi: False
-username: samanyougarg #github username
-repo: hanuman #github repository
-branch: master #branch
-relative_source: ../hanuman/ #source directory
-destination: ../hanuman-pages/ #destination directory
-production_url: https://KimEJ.github.io
-source_url:  https://github.com/KimEJ/KimEJ.github.io #source repository url
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale
