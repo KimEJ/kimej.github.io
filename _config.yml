@@ -1,41 +1,28 @@
-# Site settings
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Setup
 title:          KimEJ
-description:    "KimEJ's blog"
-baseurl:        "/"
+baseurl:        ""
 url:            "https://kimej.github.io/"
-
-# Google Analytics
-google_analytics: UA—XXXXXXXX-X
-
-# Author
-author:
-  name:         Kim Eojin
-  url:          https://kimej.github.io/
-  email:        kimuj5090@gmail.com
-
-# Build settings
-markdown:       kramdown
-include:
-  - _pages
 
 # Assets
 sass:
   sass_dir:     _sass
-  style:        compressed
+  style:        :compressed
 
-# Gems
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
-  # - jemoji #Uncomment this to allow emoji in your post
+# Build settings
+markdown:       kramdown
 
-# Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+# About
+author:
+  name:         Eojin Kim
+  url:          https://kimej.github.io/
+  email:        kimuj5090@gmail.com  
+  github:       KimEJ
+  # twitter:      playpingpong
 
-# Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-
-# Disqus (Set to your disqus id)
-disqus:         jekyll-tale
+# Custom vars
+# version:        3.4.1
+# github:
+#   repo:         https://github.com/iamleejihye/iamleejihye.github.io
